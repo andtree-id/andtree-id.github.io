@@ -6,7 +6,8 @@ description: Ekosistem Aplikasi Resmi Andtree
 theme: minima
 collections:
   apps:
-    output: false
+    output: true
+    permalink: /app/:slug/
 
 plugins:
   - jekyll-feed
