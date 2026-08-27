@@ -1,124 +1,17 @@
 ---
 layout: default
-title: Andtree — Official Enterprise Showcase
+title: Beranda
 ---
-
-<!-- Hero Section Premium -->
-<section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-slate-100/70 via-emerald-50/20 to-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div class="text-center max-w-3xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> Terverifikasi Enterprise Grade
-            </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
-                Ekosistem Aplikasi <br/><span class="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 bg-clip-text text-transparent">Andtree Enterprise</span>
-            </h1>
-            <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                Solusi aplikasi Android resmi produksi Andtree yang dirancang presisi untuk skala bisnis enterprise, keamanan tinggi, dan otomatisasi produktivitas.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Apps Grid Showcase -->
-<section id="apps" class="py-12 -mt-10 relative z-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for app in site.apps %}
-            <div class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-7 hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 group flex flex-col justify-between relative">
-                
-                <div>
-                    <!-- Header Card & Fitur #3: Badge Status -->
-                    <div class="flex items-start justify-between mb-6">
-                        <div class="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                            <i data-lucide="{{ app.icon }}" class="w-7 h-7 text-emerald-400"></i>
-                        </div>
-                        <div class="flex flex-col items-end gap-1.5">
-                            <!-- Status Badge -->
-                            {% if app.status == "Stable" %}
-                                <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Stable Release</span>
-                            {% elsif app.status == "Beta" %}
-                                <span class="bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Beta Access</span>
-                            {% else %}
-                                <span class="bg-indigo-50 text-indigo-700 border border-indigo-200 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Internal Only</span>
-                            {% endif %}
-                            
-                            <!-- Ukuran File -->
-                            <span class="text-[11px] font-bold text-slate-400 flex items-center gap-1">
-                                <i data-lucide="hard-drive" class="w-3 h-3"></i> {{ app.file_size }}
-                            </span>
-                        </div>
-                    </div>
-
-                    <span class="text-xs font-extrabold text-emerald-600 uppercase tracking-widest">{{ app.category }}</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1 mb-3 group-hover:text-emerald-600 transition-colors">{{ app.name }}</h2>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-6">{{ app.description }}</p>
-                </div>
-
-                <!-- Footer Card Actions (Fitur #2: Modal Trigger Integration) -->
-                <div class="pt-5 border-t border-slate-100 space-y-3">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-semibold text-slate-400">Versi {{ app.version }}</span>
-                        <!-- Trigger Modal Cara Kerja -->
-                        <button onclick="openModal('Cara Kerja - {{ app.name }}', 'Petunjuk Penggunaan', 'help-circle', '{{ app.how_it_works_detail | escape }}')" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-emerald-600 transition-colors">
-                            <i data-lucide="help-circle" class="w-4 h-4 text-emerald-500"></i> Cara Kerja
-                        </button>
-                    </div>
-
-                    <div class="flex items-center justify-between pt-1">
-                        <!-- Trigger Modal Privasi -->
-                        <button onclick="openModal('Kebijakan Privasi - {{ app.name }}', 'Privasi & Proteksi Data', 'shield', '{{ app.privacy_detail | escape }}')" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-emerald-600 transition-colors">
-                            <i data-lucide="shield" class="w-4 h-4 text-emerald-500"></i> Kebijakan Privasi
-                        </button>
-                        
-                        <a href="{{ app.playstore_url }}" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-white bg-slate-900 hover:bg-emerald-600 px-3.5 py-2 rounded-xl transition-all shadow-sm">
-                            Google Play <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- Fitur #7: Seksi FAQ & Support Enterprise -->
-<section id="faq" class="py-16 bg-white border-t border-slate-200/80">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Pertanyaan Umum (FAQ)</h2>
-            <p class="text-slate-500 text-sm mt-2">Informasi penting terkait kompatibilitas dan keamanan ekosistem aplikasi Andtree.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <h3 class="font-bold text-slate-900 text-base mb-2 flex items-center gap-2">
-                    <i data-lucide="smartphone" class="w-5 h-5 text-emerald-600"></i> Versi Android Minimal
-                </h3>
-                <p class="text-sm text-slate-600 leading-relaxed">Seluruh aplikasi Andtree berjalan optimal pada versi Android 8.0 (Oreo) hingga versi Android 15 terbaru.</p>
-            </div>
-
-            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <h3 class="font-bold text-slate-900 text-base mb-2 flex items-center gap-2">
-                    <i data-lucide="lock" class="w-5 h-5 text-emerald-600"></i> Keamanan Data Enterprise
-                </h3>
-                <p class="text-sm text-slate-600 leading-relaxed">Seluruh lalu lintas data dienkripsi menggunakan protokol AES-256 dan sertifikasi SSL enterprise.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Fitur #7: Seksi Support / Kontak Helpdesk -->
-<section id="support" class="py-16 bg-slate-900 text-white relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4">
-            <i data-lucide="headphones" class="w-6 h-6"></i>
-        </div>
-        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Butuh Bantuan Enterprise Support?</h2>
-        <p class="text-slate-400 text-sm max-w-xl mx-auto mb-8">Tim teknis Andtree siap membantu kendala instalasi, lisensi organisasi, atau laporan bug aplikasi.</p>
-        <a href="mailto:support@andtree.com" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 text-sm">
-            <i data-lucide="mail" class="w-4 h-4"></i> Hubungi Tim Support
-        </a>
-    </div>
+<section class="app-grid">
+  <h2>Daftar Aplikasi</h2>
+  <div class="grid-container">
+    {% for app in site.apps %}
+      <div class="app-card">
+        <h3>{{ app.title }}</h3>
+        <p>{{ app.description | strip_html | truncate: 100 }}</p>
+        <!-- Navigasi langsung ke URL postingan /app/judul -->
+        <a href="{{ app.url | relative_url }}" class="btn-link">Buka Aplikasi</a>
+      </div>
+    {% endfor %}
+  </div>
 </section>
