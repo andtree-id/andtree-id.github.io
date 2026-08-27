@@ -1,0 +1,59 @@
+---
+layout: default
+title: Andtree — Showcase Aplikasi
+---
+
+<section id="apps" class="relative">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wide uppercase mb-6">
+                <i data-lucide="smartphone" class="w-4 h-4"></i> Official Android Apps
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Ekosistem Aplikasi <span class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Andtree</span>
+            </h1>
+            <p class="text-slate-400 text-base md:text-lg">
+                Jelajahi seluruh rangkaian aplikasi Android resmi produksi Andtree.
+            </p>
+        </div>
+
+        <!-- Apps Grid dari Collection -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for app in site.apps %}
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition-all group flex flex-col justify-between shadow-xl backdrop-blur-sm">
+                <div>
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr {{ app.color_gradient | default: 'from-emerald-500 to-teal-400' }} p-0.5 shadow-md">
+                            <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+                                <i data-lucide="{{ app.icon }}" class="w-7 h-7 text-emerald-400"></i>
+                            </div>
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 text-xs px-3 py-1 rounded-full border border-emerald-500/20 font-medium">{{ app.category }}</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">{{ app.name }}</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">{{ app.description }}</p>
+                </div>
+
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Versi {{ app.version }}</span>
+                        <a href="{{ app.how_it_works_url }}" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-400 hover:text-emerald-400 transition-colors">
+                            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Cara Kerja
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="{{ app.privacy_url }}" class="inline-flex items-center gap-1 text-xs font-semibold text-slate-400 hover:text-emerald-400 transition-colors">
+                            <i data-lucide="shield" class="w-3.5 h-3.5"></i> Kebijakan Privasi
+                        </a>
+                        <a href="{{ app.playstore_url }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors">
+                            Google Play <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
