@@ -6,7 +6,7 @@ version: "1.2"
 status: "Stable"
 file_size: "11 MB"
 description: "Pintasan cepat untuk membuka aplikasi Files bawaan sistem Android langsung"
-playstore_url: "https://google.com"
+playstore_url: "https://play.google.com/store/apps/details?id=id.andtree.berkas"
 
 how_it_works_detail: "<b>1. Login Enterprise:</b> Gunakan kredensial organisasi Anda.<br/><b>2. Sinkronisasi Data:</b> Sistem akan memuat dasbor analitik real-time.<br/><b>3. Monitoring:</b> Pantau performa server dan alur kerja tim secara langsung."
 
