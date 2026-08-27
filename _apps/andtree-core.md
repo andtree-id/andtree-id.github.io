@@ -10,8 +10,7 @@ playstore_url: "https://google.com"
 
 how_it_works_detail: "<b>1. Login Enterprise:</b> Gunakan kredensial organisasi Anda.<br/><b>2. Sinkronisasi Data:</b> Sistem akan memuat dasbor analitik real-time.<br/><b>3. Monitoring:</b> Pantau performa server dan alur kerja tim secara langsung."
 
-privacy_detail: |
-  <div class="container">
+privacy_detail: "
 
       <p>Kebijakan Privasi ini menjelaskan bagaimana aplikasi kami mengelola informasi Anda. Aplikasi ini dirancang sebagai alat bantu pintasan (shortcut) sederhana untuk membuka pengelola berkas sistem bawaan Android (DocumentsUI).</p>
 
@@ -36,9 +35,5 @@ privacy_detail: |
 
       <h2>6. Hubungi Kami</h2>
       <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, Anda dapat menghubungi pengembang dengan berkomentar disini</p>
-
-      <div class="footer">
-          &copy; 2026 andBerkas Hak cipta dilindungi undang-undang.
-      </div>
-  </div>
+"
 ---
