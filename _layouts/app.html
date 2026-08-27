@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="app-detail-page">
+  <header class="app-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.icon %}
+      <img src="{{ page.icon | relative_url }}" alt="{{ page.title }} Icon" class="app-icon">
+    {% endif %}
+  </header>
+
+  <div class="app-body">
+    {{ content }}
+  </div>
+
+  {% if page.download_url %}
+    <div class="app-actions">
+      <a href="{{ page.download_url }}" class="btn-download" target="_blank">Unduh Aplikasi</a>
+    </div>
+  {% endif %}
+
+  <div class="back-link">
+    <a href="{{ '/' | relative_url }}">&larr; Kembali ke Beranda</a>
+  </div>
+</article>
