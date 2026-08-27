@@ -6,7 +6,7 @@ version: "1.2"
 status: "Stable"
 file_size: "5 MB"
 description: "Jalankan web server HTTP lokal untuk melihat file dan situs web di HP."
-playstore_url: "https://playgoogle.com"
+playstore_url: "https://play.google.com/store/apps/details?id=id.andtree.localserver"
 
 how_it_works_detail: |
   1. **Jalankan Server:** Aktifkan server HTTP lokal melalui aplikasi.
