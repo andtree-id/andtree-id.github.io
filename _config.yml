@@ -1,0 +1,12 @@
+title: Andtree — Official Apps Showcase
+email: contact@andtree.com
+description: Ekosistem Aplikasi Resmi Andtree
+
+# Jekyll Settings
+theme: minima
+collections:
+  apps:
+    output: false
+
+plugins:
+  - jekyll-feed
