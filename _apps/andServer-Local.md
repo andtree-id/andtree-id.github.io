@@ -1,4 +1,5 @@
 ---
+layout: default
 name: "andServer - Local"
 category: "Alat"
 icon: "cpu"
@@ -41,5 +42,40 @@ privacy_detail: |
   Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Setiap perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan terbaru.
 
   ### 6. Hubungi Kami
-  Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, Anda dapat menghubungi pengembang dengan berkomentar disini
+  Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, Anda dapat menghubungi pengembang dengan berkomentar disini.
 ---
+
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="w-16 h-16 rounded-2xl bg-slate-900 text-white flex items-center justify-center">
+        <i data-lucide="{{ page.icon }}" class="w-8 h-8 text-emerald-400"></i>
+      </div>
+      <div>
+        <span class="text-xs font-extrabold text-emerald-600 uppercase tracking-widest">{{ page.category }}</span>
+        <h1 class="text-3xl font-black text-slate-900">{{ page.name }}</h1>
+      </div>
+    </div>
+    
+    <p class="text-slate-600 text-base mb-8">{{ page.description }}</p>
+
+    <div class="prose max-w-none text-slate-700">
+      <h2 class="text-xl font-bold text-slate-900 mb-2">Cara Kerja</h2>
+      <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+        {{ page.how_it_works_detail | markdownify }}
+      </div>
+
+      <h2 class="text-xl font-bold text-slate-900 mb-2">Kebijakan Privasi</h2>
+      <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+        {{ page.privacy_detail | markdownify }}
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 flex justify-between items-center">
+      <a href="{{ '/' | relative_url }}" class="text-xs font-bold text-slate-600 hover:text-emerald-600">&larr; Kembali ke Beranda</a>
+      <a href="{{ page.playstore_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-extrabold text-white bg-slate-900 hover:bg-emerald-600 px-4 py-2.5 rounded-xl transition-all">
+        Download di Play Store <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</div>
