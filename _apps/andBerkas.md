@@ -9,11 +9,6 @@ file_size: "11 MB"
 description: "Pintasan cepat untuk membuka aplikasi Files bawaan sistem Android langsung"
 playstore_url: "https://play.google.com/store/apps/details?id=id.andtree.berkas"
 
-how_it_works_detail: |
-  1. **Buka Aplikasi:** Jalankan aplikasi andBerkas pada perangkat Android Anda.
-  2. **Akses Instan:** Aplikasi akan langsung membuka pengelola berkas bawaan sistem (DocumentsUI).
-  3. **Kelola Berkas:** Kelola penyimpanan internal utama (root storage) tanpa hambatan antarmuka vendor.
-
 privacy_detail: |
   Kebijakan Privasi ini menjelaskan bagaimana aplikasi kami mengelola informasi Anda. Aplikasi ini dirancang sebagai alat bantu pintasan (shortcut) sederhana untuk membuka pengelola berkas sistem bawaan Android (DocumentsUI).
 
@@ -54,11 +49,6 @@ privacy_detail: |
     <p class="text-slate-600 text-base mb-8">{{ page.description }}</p>
 
     <div class="prose max-w-none text-slate-700">
-      <h2 class="text-xl font-bold text-slate-900 mb-2">Cara Kerja</h2>
-      <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
-        {{ page.how_it_works_detail | markdownify }}
-      </div>
-
       <h2 class="text-xl font-bold text-slate-900 mb-2">Kebijakan Privasi</h2>
       <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
         {{ page.privacy_detail | markdownify }}
