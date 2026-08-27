@@ -10,7 +10,7 @@ playstore_url: "https://play.google.com/store/apps/details?id=id.andtree.berkas"
 
 how_it_works_detail: "<b>1. Login Enterprise:</b> Gunakan kredensial organisasi Anda.<br/><b>2. Sinkronisasi Data:</b> Sistem akan memuat dasbor analitik real-time.<br/><b>3. Monitoring:</b> Pantau performa server dan alur kerja tim secara langsung."
 
-privacy_detail: "
+privacy_detail: |
 <div class="container">
 
     <p>Kebijakan Privasi ini menjelaskan bagaimana aplikasi kami mengelola informasi Anda. Aplikasi ini dirancang sebagai alat bantu pintasan (shortcut) sederhana untuk membuka pengelola berkas sistem bawaan Android (DocumentsUI).</p>
