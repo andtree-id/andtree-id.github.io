@@ -9,11 +9,6 @@ file_size: "5 MB"
 description: "Jalankan web server HTTP lokal untuk melihat file dan situs web di HP."
 playstore_url: "https://play.google.com/store/apps/details?id=id.andtree.localserver"
 
-how_it_works_detail: |
-  1. **Jalankan Server:** Aktifkan server HTTP lokal melalui aplikasi.
-  2. **Pilih Folder:** Tentukan direktori penyimpanan lokal sebagai root server.
-  3. **Akses Browser:** Buka alamat IP lokal yang tertera di browser perangkat lain.
-
 privacy_detail: |
   Kebijakan Privasi ini menjelaskan bagaimana aplikasi **andServer - Lokal** (kami) mengelola data dan informasi pengguna saat menggunakan aplikasi Android kami.
 
@@ -60,11 +55,6 @@ privacy_detail: |
     <p class="text-slate-600 text-base mb-8">{{ page.description }}</p>
 
     <div class="prose max-w-none text-slate-700">
-      <h2 class="text-xl font-bold text-slate-900 mb-2">Cara Kerja</h2>
-      <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
-        {{ page.how_it_works_detail | markdownify }}
-      </div>
-
       <h2 class="text-xl font-bold text-slate-900 mb-2">Kebijakan Privasi</h2>
       <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
         {{ page.privacy_detail | markdownify }}
